@@ -20,8 +20,16 @@ def shopSmart(orderList, fruitShops):
     """
 
     # *** Your Code Here ***
+    cheapestShop = fruitShops[0]
+    lowestCost = cheapestShop.getPriceOfOrder(orderList)
 
-    return None
+    shop2 = fruitShops[1]
+    theCost = shop2.getPriceOfOrder(orderList)
+    if theCost < lowestCost:
+        cheapestShop = shop2
+        lowestCost = theCost
+        
+    return cheapestShop
 
 def main():
     dir1 = {

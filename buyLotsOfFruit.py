@@ -34,6 +34,7 @@ def buyLotsOfFruit(orderList):
         if x[0] in FRUIT_PRICES:
            sum += FRUIT_PRICES[x[0]] * x[1]
         else:
+            print(x[0] + " is not in the FRUIT_PRICES list")
             return None
     return sum 
 
